@@ -21,7 +21,7 @@ Hadoop Implementation: Use another MapReduce job, where mappers output each word
 Details
 Document Count (IDF Calculation)
 Next, I focused on calculating the document frequency for each word, an essential part of computing the IDF (Inverse Document Frequency) which would be used later in determining the importance of words across the corpus. This was implemented through another MapReduce job. The mapper output each word along with the document ID it came from, ensuring no duplicates. The reducer then tallied the unique document IDs for each word.
-
+<br>
 Step 3: Indexer (TF Calculation)
 Task: For each document, calculate the term frequency (TF) for each word.
 Hadoop Implementation: Implement a MapReduce job where mappers output terms with their occurrence count from each document, and reducers calculate the TF.
